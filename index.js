@@ -4,8 +4,14 @@ const list = document.querySelector(".list");
 const input = document.querySelector(".footer__text");
 const addBtn = document.querySelector(".footer__btn");
 
+/**
+ * add버튼 클릭시 onAdd 함수 실행
+ */
 addBtn.addEventListener("click", onAdd);
 
+/**
+ * 사용자입력함수
+ */
 function onAdd() {
   // 1. 사용자가 입력한 텍스트를 받아옴
   const text = input.value;
@@ -20,11 +26,17 @@ function onAdd() {
   // 3. list 컨테이너 안에 새로 만든 아이템을 추가 한다.
   list.appendChild(row);
 
-  // 4. 인풋을 초기화한다.
+  // 4. 새로 추가된 아이템으로 스크롤링
+  item.scrollIntoView({ block: "center" });
+
+  // 5. 인풋을 초기화한다.
   input.value = "";
   input.focus();
 }
 
+/**
+ * elemente 생성 함수
+ */
 function createItem(text) {
   const itemRow = document.createElement("li");
   itemRow.setAttribute("class", "itemrow");
@@ -55,3 +67,12 @@ function createItem(text) {
 
   return itemRow;
 }
+
+/**
+ * enter입력시 추가되게하는 이벤트
+ */
+input.addEventListener("keypress", function (event) {
+  if (event.key == "Enter") {
+    onAdd();
+  }
+});
