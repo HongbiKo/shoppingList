@@ -157,6 +157,12 @@ h1 {
 /* Responsive */
 /* For below 768px screen width*/
 @media screen and (max-width: 768px) {
+  h1 {
+    font-size: var(--font-medium);
+  }
+  .title {
+    padding: 5px 0 20px;
+  }
   .container {
     width: 85%;
     height: 70%;
