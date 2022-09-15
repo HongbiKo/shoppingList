@@ -28,7 +28,7 @@
 /* Universal tags */
 * {
   box-sizing: border-box;
-  font-family: 'Noto Sans KR', sans-serif;
+  font-family: 'Montserrat', 'Noto Sans KR', sans-serif;
 }
 html {
   width: 100%;
@@ -39,7 +39,6 @@ body {
   height: 100%;
   margin : 0;
   padding: 0;
-  margin: auto;
   background-color: rgb(0, 1, 52);
 }
 a{
@@ -76,33 +75,65 @@ h1 {
 
 /* Subtitle */
 .subtitle {
-  text-align: center;
   height: 12%;
-  line-height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.subtitle span {
   font-size: var(--font-regular);
   font-weight: var(--fweight-regular);
-  font-family: 'Montserrat', sans-serif;
 }
 
 /* List */
 .list {
+  display: block;
+  margin: 0;
+  padding: 0;
   height: 78%;
   background-color: var(--color-light-whtie);
+  overflow-y: auto;
 }
 
-/* Box */
-.box {
+/* Item */
+.itemrow {
+  font-size: var(--font-samll);
+  font-weight: var(--fweight-thin);
+}
+.item {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 20px;
+}
+.item__name {
+  cursor: pointer;
+}
+.item__delete {
+  border: none;
+  cursor: pointer;
+  transition: all 300ms ease-in;
+}
+.item__delete:hover svg path {
+  stroke:  rgb(255, 112, 172);
+  transform: scale(1.05);
+}
+
+
+/* Footer */
+.footer {
   height: 10%;
   display: flex;
   justify-content: space-between;
 }
-.box input {
+.footer__text {
   width: 80%;
   border-bottom-left-radius: 20px;
   border: none;
   padding-left: 20px;
+  outline: none;
 }
-.box button {
+.footer__btn {
   width: 20%;
   border-bottom-right-radius: 20px;
   border: none;
@@ -111,4 +142,9 @@ h1 {
   display: flex;
   justify-content: center;
   align-items: center;
+  transition: all 300ms ease-in;
+  outline: none;
+}
+.footer__btn:hover > img {
+  transform:scale(1.1);
 }

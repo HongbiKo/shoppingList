@@ -9,19 +9,35 @@
 	<meta name="author" content="hongbiKo">
   <!-- <link rel="shortcut icon" href=""> -->
   <link rel="stylesheet" type="text/css" href="index.css">
-	<!-- <script src="index.j's" defer></script> -->
+	<script src="index.js" defer></script>
 </head>
 <body>
   <h1 class="title">Shopping List</h1>
-  <div class="container">
-    <div class="subtitle">Buy the goods that you really need!!</div>
-    <div class="list"></div>
-    <div class="box">
-      <input type="text" placeholder="text here:)" >
-      <button>
+  <section class="container">
+    <div class="subtitle">
+      <span>Buy the goods that you really need!!</span>
+    </div>
+    <ul class="list">
+      <li class="itemrow">
+        <div class="item">
+          <span class="item__name">우유</span>
+          <button class="item__delete">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M8.57143 7V4.8C8.57143 4.32261 8.75204 3.86477 9.07353 3.52721C9.39502 3.18964 9.83106 3 10.2857 3H13.7143C14.1689 3 14.605 3.18964 14.9265 3.52721C15.248 3.86477 15.4286 4.32261 15.4286 4.8V7M19 7L18 19.2C18 19.6774 17.8194 20.1352 17.4979 20.4728C17.1764 20.8104 16.7404 21 16.2857 21H7.71429C7.25963 21 6.82359 20.8104 6.5021 20.4728C6.18061 20.1352 6 19.6774 6 19.2L5 7H19Z" stroke="#14181F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M4 7H5.77778H20" stroke="#14181F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M10 11V16" stroke="#14181F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M14 11V16" stroke="#14181F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>              
+          </button>
+        </div>
+      </li>
+    </ul>
+    <div class="footer">
+      <input class="footer__text" type="text" placeholder="text here:)" >
+      <button class="footer__btn">
         <img src="imgs/shoppingCart.svg" alt="button__plus">
       </button>
     </div>
-  </div>
+  </section>
 </body>
 </html>
