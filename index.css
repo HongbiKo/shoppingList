@@ -152,3 +152,19 @@ h1 {
 .footer__btn:hover > img {
   transform:scale(1.1);
 }
+
+
+/* Responsive */
+/* For below 768px screen width*/
+@media screen and (max-width: 768px) {
+  .container {
+    width: 85%;
+    height: 70%;
+    background-color: var(--color-white);
+    margin: 0 auto;
+    border-radius: 20px;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-between;
+  }
+}
