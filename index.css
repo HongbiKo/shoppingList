@@ -95,6 +95,9 @@ h1 {
   background-color: var(--color-light-whtie);
   overflow-y: auto;
 }
+.item__name.throughline {
+  text-decoration: line-through;
+}
 
 /* Item */
 .itemrow {

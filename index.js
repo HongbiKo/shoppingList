@@ -27,7 +27,7 @@ function onAdd() {
   list.appendChild(row);
 
   // 4. 새로 추가된 아이템으로 스크롤링
-  item.scrollIntoView({ block: "center" });
+  list.scrollIntoView({ block: "center" });
 
   // 5. 인풋을 초기화한다.
   input.value = "";
@@ -61,6 +61,11 @@ function createItem(text) {
     list.removeChild(itemRow);
   });
 
+  name.addEventListener("click", function () {
+    console.log("line");
+    name.classList.add("throughline");
+  });
+
   item.appendChild(name);
   item.appendChild(deleteBtn);
   itemRow.appendChild(item);
@@ -74,5 +79,7 @@ function createItem(text) {
 input.addEventListener("keypress", function (event) {
   if (event.key == "Enter") {
     onAdd();
+    input.value = "";
+    input.focus();
   }
 });
