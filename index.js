@@ -57,12 +57,11 @@ function createItem(text) {
   <path d="M14 11V16" stroke="#14181F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
   </svg>`;
 
-  deleteBtn.addEventListener("click", () => {
+  deleteBtn.addEventListener("click", function () {
     list.removeChild(itemRow);
   });
 
   name.addEventListener("click", function () {
-    console.log("line");
     name.classList.add("throughline");
   });
 
@@ -79,7 +78,5 @@ function createItem(text) {
 input.addEventListener("keypress", function (event) {
   if (event.key == "Enter") {
     onAdd();
-    input.value = "";
-    input.focus();
   }
 });
