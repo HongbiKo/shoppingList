@@ -88,12 +88,18 @@ function createItem(text) {
 }
 
 /**
- * delete 버튼 기능 - 이벤트위임으로 처리
+ * delete 버튼 기능 & 선긋기 기능 - 이벤트위임으로 처리
  */
 list.addEventListener("click", function (e) {
   const targetId = e.target.dataset.targetId;
-  const deleted = document.querySelector(`.itemrow[data-id ="${targetId}"]`);
-  deleted.remove();
+  if (targetId) {
+    const deleted = document.querySelector(`.itemrow[data-id="${targetId}"]`);
+    deleted.remove();
+  }
+
+  const target = e.target;
+  if (!target.classList.contains("item__name")) return;
+  target.classList.toggle("throughline");
 });
 
 /*
