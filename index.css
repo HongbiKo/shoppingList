@@ -132,6 +132,9 @@ h1 {
 /* Footer */
 .footer {
   height: 10%;
+}
+.footer__form {
+  height: 100%;
   display: flex;
   justify-content: space-between;
 }

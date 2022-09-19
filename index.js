@@ -1,13 +1,14 @@
 "use strict";
 
 const list = document.querySelector(".list");
+const form = document.querySelector(".footer__form");
 const input = document.querySelector(".footer__text");
 const addBtn = document.querySelector(".footer__btn");
 
-/**
- * add버튼 클릭시 onAdd 함수 실행
- */
-addBtn.addEventListener("click", onAdd);
+form.addEventListener("submit", function (e) {
+  e.preventDefault();
+  onAdd();
+});
 
 /**
  * 사용자입력함수
@@ -95,11 +96,16 @@ list.addEventListener("click", function (e) {
   deleted.remove();
 });
 
-/**
- * enter입력시 추가되게하는 이벤트
- */
-input.addEventListener("keypress", function (event) {
+/*
+addBtn.addEventListener("click", onAdd);
+
+input.addEventListener("keydown", function (event) {
+  if (event.isComposing) {
+    return;
+  }
   if (event.key == "Enter") {
     onAdd();
   }
 });
+*/
+// 위의 form.addEventListner로 대체.
