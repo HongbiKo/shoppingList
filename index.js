@@ -46,12 +46,12 @@ function createItem(text) {
   itemRow.innerHTML = `
     <div class="item">
       <span class="item__name">${text}</span>
-      <button class="item__delete" data-target-id = ${id}>
-        <svg data-target-id = ${id} width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path data-target-id = ${id} d="M8.57143 7V4.8C8.57143 4.32261 8.75204 3.86477 9.07353 3.52721C9.39502 3.18964 9.83106 3 10.2857 3H13.7143C14.1689 3 14.605 3.18964 14.9265 3.52721C15.248 3.86477 15.4286 4.32261 15.4286 4.8V7M19 7L18 19.2C18 19.6774 17.8194 20.1352 17.4979 20.4728C17.1764 20.8104 16.7404 21 16.2857 21H7.71429C7.25963 21 6.82359 20.8104 6.5021 20.4728C6.18061 20.1352 6 19.6774 6 19.2L5 7H19Z" stroke="#14181F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-          <path data-target-id = ${id} d="M4 7H5.77778H20" stroke="#14181F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-          <path data-target-id = ${id} d="M10 11V16" stroke="#14181F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-          <path data-target-id = ${id} d="M14 11V16" stroke="#14181F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      <button class="item__delete" data-id = ${id}>
+        <svg data-id = ${id} width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path data-id = ${id} d="M8.57143 7V4.8C8.57143 4.32261 8.75204 3.86477 9.07353 3.52721C9.39502 3.18964 9.83106 3 10.2857 3H13.7143C14.1689 3 14.605 3.18964 14.9265 3.52721C15.248 3.86477 15.4286 4.32261 15.4286 4.8V7M19 7L18 19.2C18 19.6774 17.8194 20.1352 17.4979 20.4728C17.1764 20.8104 16.7404 21 16.2857 21H7.71429C7.25963 21 6.82359 20.8104 6.5021 20.4728C6.18061 20.1352 6 19.6774 6 19.2L5 7H19Z" stroke="#14181F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          <path data-id = ${id} d="M4 7H5.77778H20" stroke="#14181F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          <path data-id = ${id} d="M10 11V16" stroke="#14181F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          <path data-id = ${id} d="M14 11V16" stroke="#14181F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
         </svg>
       </button>
     </div>`;
@@ -91,9 +91,9 @@ function createItem(text) {
  * delete 버튼 기능 & 선긋기 기능 - 이벤트위임으로 처리
  */
 list.addEventListener("click", function (e) {
-  const targetId = e.target.dataset.targetId;
-  if (targetId) {
-    const deleted = document.querySelector(`.itemrow[data-id="${targetId}"]`);
+  const id = e.target.dataset.id;
+  if (id) {
+    const deleted = document.querySelector(`.itemrow[data-id="${id}"]`);
     deleted.remove();
   }
 
