@@ -165,6 +165,17 @@ h1 {
 /* Responsive */
 /* For below 768px screen width*/
 @media screen and (max-width: 768px) {
+  :root {
+  /* Font size */
+  --font-large : 30px;
+  --font-medium: 20px;
+  --font-middle: 18px;
+  --font-regular: 16px;
+  --font-small: 14px;
+  --font-micro: 12px;
+  }
+
+
   h1 {
     font-size: var(--font-medium);
   }
